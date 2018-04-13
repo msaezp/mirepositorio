@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        
+        
+        
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="js/funciones.js"></script>
+
+              
+              <script>
+                
+            
+                    
+                    $('#tabla').DataTable({
+                        "order": [[ 2, "desc"]],
+                        
+                        
+                        "language": {
+                            
+                        "sProcessing":     "Procesando...",
+                        "sLengthMenu":     "Mostrar _MENU_ registros",
+                        "sZeroRecords":    "No se encontraron resultados",
+                        "sEmptyTable":     "Ningún dato disponible en esta tabla",
+                        "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                        "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                        "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                        "sInfoPostFix":    "",
+                        "sSearch":         "Buscar:",
+                        "sUrl":            "",
+                        "sInfoThousands":  ",",
+                        "sLoadingRecords": "Cargando...",
+                        "oPaginate": {
+                            "sFirst":    "Primero",
+                            "sLast":     "Ultimo",
+                            "sNext":     "Siguiente",
+                             "sPrevious": "Anterior"
+                                    },
+                         "oAria": {
+                        "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+         
+                        }
+                 } 
+                        
+                    });
+                
+                
+           
+
+               
+                
+            </script>
+              
+              
+    
+
+        
+        
+    </head>
+    
+    <body>
+        
+        <header>
+            
+            
+        </header>
+        
+        <nav>
+            
+            
+        </nav>
+        
+        <section>
+            <table id="listado" class="display" width="100%"></table>
+            <div id="principal">
+                
+                 <table id="ejemplo"> </table>
+                
+            <p onclick="mensaje()">Hacer click</p> <!--sirve para seleccionar el párrafo cuando hacemos click en él--> 
+            <p id="parrafo1">Hola jeje</p>
+            <br>
+            <p id="nombre">Maria</p>
+            <p id="apellidos">Saez Piqueras</p>
+            
+            <p id="nombrecompleto"onclick=concatenaNombre()>Concatenar nombre</p> <!--lo que hacemos aqui es concatenar cadenas de caracteres-->
+            
+            <input id="numero1" type="number" name="numero1" placeholder="Escribe el primer digito">
+            <input id="numero2" type="number" name="numero2" placeholder="Escribe el segundo digito">
+        
+            <br>
+            <br>
+            
+            <input type="submit" value="Suma" onclick="sumar();">
+            <input type="submit" value="Resta" onclick="restar();">
+            <input type="submit" value="Multiplicacion" onclick="multiplicar();">
+            <input type="submit" value="Division" onclick="dividir();">
+            <input type="submit" value="Exponencial" onclick="exponente();">
+            <input type="submit" value="Pares" onclick="paridad();">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Resultado: </p>
+            <p id="resultado"></p>
+            <p id="resultado1"></p>
+            <p id="resultado2"></p>
+        
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="Coches" onclick="muestracoches();">
+            <p> Listado coches: </p>
+            <p id= "listadocoches"></p>
+            
+        
+            <input type="submit" value="Pesos" onclick="pesos();">
+            <br>
+            <br>
+           
+            <p id= "peso"></p>
+        
+            
+            <input type="submit" value="Suspensos" onclick="ponerNota();">
+            
+            <input type="submit" value="Aptos" onclick="ponerNota();">
+            <input type="submit" value="Bienes" onclick="ponerNota();">
+            <input type="submit" value="Notables" onclick="ponerNota();">
+            <input type="submit" value="Sobresalientes" onclick="ponerNota();">
+            <input type="submit" value="Matriculas de honor" onclick="ponerNota();">
+            <p id= "suspenso"></p>
+            <p id= "apto"></p>
+            <p id= "bien"></p>
+            <p id= "notable"></p>
+            <p id= "sobresaliente"></p>
+            <p id= "notable"></p>
+            
+            <input type="submit" value="Empleado que menos cobra" onclick="dinero();">
+            <p id= "dinerillo"></p>
+            
+            
+            
+            <table id="tabla">  <!-- HACER DISEÑO DE LA TABLA EN EL CSS-->
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>SUELDO</th>
+                    <th>HORAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Javier</th>
+                    <th>3500</th>
+                    <th>100</th>
+                </tr>
+                <tr>
+                    <th>Fran</th>
+                    <th>2000</th>
+                    <th>100</th>
+                </tr>
+                <tr>
+                    <th>Ana</th>
+                    <th>2500</th>
+                    <th>150</th>
+                </tr>
+              </tbody>  
+            </table>
+            
+            
+            
+            
+            
+        </div>
+            
+        </section>
+         
+        <aside>
+            
+            
+        </aside>
+        
+        <footer>
+            
+            
+        </footer>
+        
+    </body>
+    
+</html>
